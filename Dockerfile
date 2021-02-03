@@ -1,4 +1,4 @@
-FROM imperialgenomicsfacility/base-notebook-image:release-v0.0.3
+FROM imperialgenomicsfacility/base-notebook-image:release-v0.0.5
 LABEL MAINTAINER 'IGF'
 ENV NB_USER vmuser
 ENV NB_UID 1000
@@ -39,10 +39,8 @@ ENV PATH $PATH:/home/$NB_USER/miniconda3/bin/
 RUN . /home/vmuser/miniconda3/etc/profile.d/conda.sh && \
     conda config --set safety_checks disabled && \
     conda update -n base -c defaults conda && \
-    conda activate notebook-env && \
     conda env update -q -n notebook-env --file /home/$NB_USER/environment.yml && \
     conda clean -a -y && \
-    jupyter serverextension enable --sys-prefix jupyter_server_proxy && \
     rm -rf /home/$NB_USER/.cache && \
     rm -rf /home/$NB_USER/tmp && \
     mkdir -p /home/$NB_USER/tmp && \
