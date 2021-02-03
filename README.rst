@@ -6,10 +6,12 @@
     :target: https://hail-notebook-image.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
-
+.. |nbviewer| image:: https://img.shields.io/badge/launch-nbviewer-coral
+    :target: https://nbviewer.jupyter.org/github/imperial-genomics-facility/hail-notebook-image/tree/master/
+    :alt: NBviewer
 
 Hail data analysis notebooks
 --------------------------------
-|docs| |binderMain|
+|docs| |binderMain| |nbviewer|
 
 A repository for keeping conda env and docker image file for running single cell analysis using [Hail.is](https://hail.is).
